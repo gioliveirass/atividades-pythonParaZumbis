@@ -165,6 +165,7 @@ while True:
             ======================================
             GAME OVER! O nome era '{nomeSorteado}'
             ======================================
+            Pressione ENTER para continuar...
         ''')
 		# verificando se o usuário deseja jogar novamente
         if jogar_novamente():
@@ -178,6 +179,7 @@ while True:
             ==============================================
             PARABÉNS! Você acertou o nome '{nomeSorteado}'
             ==============================================
+            Pressione ENTER para continuar...
         ''')
 		# verificando se o usuário deseja jogar novamente
         if jogar_novamente():
