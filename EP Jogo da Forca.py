@@ -123,6 +123,10 @@ def chute(letras):
 # verifica se o usuário deseja jogar novamente
 def jogar_novamente():
     resposta = input('Deseja jogar novamente? (responda S/N): ').lower()
+    
+    while resposta not in ['s', 'n']:
+        resposta = input('Digite uma resposta válida (responda S/N): ').lower()
+        
     return True if resposta == 's' else False
         
 # mensagem de vitória
@@ -156,9 +160,9 @@ while True:
     # verificando se é game over
     if len(erradas) == len(forca):
         print(f'''
-            ====================================
-            GAME OVER! O nome era {nomeSorteado}
-            ====================================
+            ======================================
+            GAME OVER! O nome era '{nomeSorteado}'
+            ======================================
         ''')
         if jogar_novamente():
             certas, erradas = '', ''
@@ -168,9 +172,9 @@ while True:
     # verifica se houve vitória
     elif ganhou():
         input(f'''
-            ============================================
-            PARABÉNS! Você acertou o nome {nomeSorteado}
-            ============================================
+            ==============================================
+            PARABÉNS! Você acertou o nome '{nomeSorteado}'
+            ==============================================
         ''')
         if jogar_novamente():
             certas, erradas = '', ''
